@@ -24,6 +24,11 @@
   font-family:"Dosis";
   font-size: 3em;
   padding-top: 0.5em;
+  transition: opacity .5s ease-in-out;
+}
+
+#tac {
+    font-family:"Indie Flower";
 }
 
 /*Ul for player*/
@@ -41,6 +46,7 @@ li {
 
 li:hover {
   font-weight: bold;
+  font-size:2.05em;
   box-shadow: 0 0 0 5px rgb(23, 93, 30);
   transition: all 0.3s ease;
   border-radius:5px;
@@ -51,9 +57,45 @@ li:hover {
 #playerOne {
   position: relative;
   right: 1em;
+  transition: opacity .5s ease-in-out;
+  cursor: pointer;
 }
 
 #playerTwo {
     position: relative;
     right: 0.3em;
+    transition: opacity .5s ease-in-out;
+    cursor: pointer;
+
+}
+
+/*X or O choice Styling*/
+#choiceOne {
+  position: relative;
+  right: 0.8em;
+  bottom: 0.5em;
+  font-size: 4em;
+  display: inline-block;
+  border-radius: 100%;
+  width: 1em;
+  transition: opacity .5s ease-in-out;
+  cursor: pointer;
+}
+
+#choiceTwo {
+  position: relative;
+  right: -0.3em;
+  bottom: 0.5em;
+  font-size: 4em;
+  display: inline-block;
+  border-radius: 100%;
+  width: 1em;
+  transition: opacity .5s ease-in-out;
+  cursor: pointer;
+}
+
+/*X and O font*/
+.choice:after {
+    font-family:"Indie Flower";
+    content:"X or O?";
 }
