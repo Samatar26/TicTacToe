@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Dosis|Indie+Flower|Lato|Open+Sans|Overpass|PT+Sans|Raleway|Roboto');
+
+#wrapper {
+    background: rgb(33, 175, 47);
+    width: 25em;
+    height: 28em;
+    margin: 7em auto;
+    border: 1px solid black;
+    border-radius: 1em;
+    box-shadow: 0 0 100px;
+}
+
+#content {
+    background-color: black;
+    height: 24em;
+    width: 22em;
+    margin: 2em auto;
+    border-radius: 0.4em;
+    color: white;
+    text-align: center;
+}
+
+#header {
+  font-family:"Dosis";
+  font-size: 3em;
+  padding-top: 0.5em;
+}
+
+/*Ul for player*/
+#players{
+  display: block;
+  margin-top: 8em;
+}
+
+li {
+    display: inline;
+    font-family: "Indie Flower";
+    font-size: 2em;
+
+}
+
+li:hover {
+  font-weight: bold;
+  box-shadow: 0 0 0 5px rgb(23, 93, 30);
+  transition: all 0.3s ease;
+  border-radius:5px;
+}
+
+
+
+#playerOne {
+  position: relative;
+  right: 1em;
+}
+
+#playerTwo {
+    position: relative;
+    right: 0.3em;
+}
