@@ -52,7 +52,7 @@ function next() {
 
 //Choice
 function ok() {
-
+    console.log(1, event);
     //Player One's Choice
     if (event.target.id==="choiceOne"){choice="X"} else{choice="O"};
     console.log(choice);
@@ -75,22 +75,32 @@ function ok() {
 }
 
 
-function cross() {
+  function gameChoice(e) {
     choiceTwo = choice === "O" ? "X" : "O";
-    event.target.childNodes[0].innerHTML = choice;
+    e.target.childNodes[0].innerHTML = choice;
     var arr = [];
     for (var i=0; i<button.length; i++) {
       if(button[i].childNodes[0].innerHTML===""){arr.push(button[i])};
     }
     console.log(arr);
+    for (var i=0; i<button.length; i++) {
+        button[i].removeEventListener("click", gameChoice);
+    }
 
     setTimeout(function() {
-
+      //Computer's Choice
       var random =  Math.floor(Math.random() * (arr.length));
       arr[random].childNodes[0].innerHTML=choiceTwo;
 
+      //Add back event listeneres
+      for (var i=0; i<button.length; i++) {
+          if(button[i].childNodes[0].innerHTML===""){
+          button[i].addEventListener("click", gameChoice);
+        }
+      }
 
     }, 500);
+    
 
 
 
@@ -101,7 +111,7 @@ function cross() {
 playerOne.addEventListener("click", next);
 playerTwo.addEventListener("click", next);
 for (var i=0; i<button.length; i++) {
-    button[i].addEventListener("click", cross);
+    button[i].addEventListener("click", gameChoice);
 }
 
 }
