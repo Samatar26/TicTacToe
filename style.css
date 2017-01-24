@@ -156,3 +156,10 @@ p {
     top: 12em;
     right: -3.3em;
 }
+
+#container {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+
+}

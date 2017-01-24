@@ -5,8 +5,13 @@ var playerTwo = document.getElementById("playerTwo");
 var header = document.getElementById("header");
 var content = document.getElementById("content");
 var button = document.getElementsByTagName("button");
-var buttonText = document.getElementsByTagName
-console.log(button);
+var buttonText = document.getElementsByTagName;
+var container = document.getElementById("container");
+var list = document.getElementById("players");
+var cross;
+var knot;
+var choice;
+var choiceTwo;
 //Function for Title Screen action
 function next() {
 
@@ -35,8 +40,8 @@ function next() {
         playerTwo.setAttribute("id", "choiceTwo");
 
 //Add new event listeneres for new elements
-        var cross = document.getElementById("choiceOne");
-        var knot = document.getElementById("choiceTwo");
+         cross = document.getElementById("choiceOne");
+         knot = document.getElementById("choiceTwo");
         cross.addEventListener("click", ok);
         knot.addEventListener("click", ok);
 
@@ -44,17 +49,57 @@ function next() {
 
 }
 
+
+//Choice
 function ok() {
-    console.log("Yes");
+
+    //Player One's Choice
+    if (event.target.id==="choiceOne"){choice="X"} else{choice="O"};
+    console.log(choice);
+    //Fade Out
+    header.style.opacity = "0";
+    cross.style.opacity="0";
+    knot.style.opacity="0";
+    //Display none
+    setTimeout(function() {
+    header.style.display = "none";
+    cross.style.display = "none";
+    knot.style.display = "none";
+    players.style.display = "none";
+    container.style.visibility = "visible";
+    container.style.opacity = "1";
+}, 500);
+    console.log(event.target.id);
+
+
 }
+
 
 function cross() {
-    event.target.childNodes[0].innerHTML = "X";
+    choiceTwo = choice === "O" ? "X" : "O";
+    event.target.childNodes[0].innerHTML = choice;
+    var arr = [];
+    for (var i=0; i<button.length; i++) {
+      if(button[i].childNodes[0].innerHTML===""){arr.push(button[i])};
+    }
+    console.log(arr);
+
+    setTimeout(function() {
+
+      var random =  Math.floor(Math.random() * (arr.length));
+      arr[random].childNodes[0].innerHTML=choiceTwo;
+
+
+    }, 500);
+
+
+
 }
 
 
-//playerOne.addEventListener("click", next);
-//playerTwo.addEventListener("click", next);
+
+playerOne.addEventListener("click", next);
+playerTwo.addEventListener("click", next);
 for (var i=0; i<button.length; i++) {
     button[i].addEventListener("click", cross);
 }
