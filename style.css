@@ -2,6 +2,7 @@
 
 #wrapper {
     background: rgb(33, 175, 47);
+    background-color: black;
     width: 25em;
     height: 28em;
     margin: 7em auto;
@@ -12,12 +13,14 @@
 
 #content {
     background-color: black;
+    box-shadow: 0 0 20px;
     height: 24em;
     width: 22em;
     margin: 2em auto;
     border-radius: 0.4em;
     color: white;
     text-align: center;
+    position: relative;
 }
 
 #header {
@@ -98,4 +101,58 @@ li:hover {
 .choice:after {
     font-family:"Indie Flower";
     content:"X or O?";
+}
+
+/* Buttons for Tic Tac Toe*/
+button {
+  height: 10em;
+  width: 8.2em;
+  margin-bottom: 0.3em;
+  margin-right: 0em;
+  position: relative;
+  top: 1em;
+  background-color: black;
+  border: none;
+  vertical-align: top;
+}
+
+p {
+    color: white;
+    font-family: "Indie Flower";
+    font-size: 5em;
+    position: relative;
+    bottom: 0.8em;
+}
+
+.buttonDividers {
+  border-bottom: 3px solid white;
+  width: 20em;
+  margin: auto;
+  height: 8em;
+  margin-bottom: -0.7em;;
+  overflow: hidden;
+  position: relative;
+  top: 0.15em;
+}
+
+#bottomDiv{
+  border: none;
+}
+
+#verticalOne, #verticalTwo {
+      height: 2px;
+      background: white;
+      position: relative;
+      z-index: 1;
+      transform: rotate(90deg);
+}
+
+#verticalOne {
+    top: 12.2em;
+    right: 3.4em;
+}
+
+#verticalTwo {
+    top: 12em;
+    right: -3.3em;
 }
