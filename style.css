@@ -8,6 +8,8 @@
     border: 1px solid black;
     border-radius: 1em;
     box-shadow: 0 0 100px;
+    transition: all 1.5s ease;
+    overflow: hidden;
 }
 
 #content {
@@ -70,6 +72,7 @@ li:hover {
     cursor: pointer;
 
 }
+
 
 /*X or O choice Styling*/
 #choiceOne {

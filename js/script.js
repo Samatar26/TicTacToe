@@ -8,6 +8,7 @@ var button = document.getElementsByTagName("button");
 var buttonText = document.getElementsByTagName;
 var container = document.getElementById("container");
 var list = document.getElementById("players");
+var wrapper = document.getElementById("wrapper");
 var cross;
 var knot;
 var choice;
@@ -60,6 +61,7 @@ function ok() {
     header.style.opacity = "0";
     cross.style.opacity="0";
     knot.style.opacity="0";
+    wrapper.style.background="black";
     //Display none
     setTimeout(function() {
     header.style.display = "none";
@@ -99,8 +101,8 @@ function ok() {
         }
       }
 
-    }, 500);
-    
+    }, 600);
+
 
 
 
