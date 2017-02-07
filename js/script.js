@@ -1,5 +1,5 @@
 window.onload = function() {
-
+function gameValue(el){ var a = document.getElementById(el);return a.childNodes[0].innerText;}
 var playerOne = document.getElementById("playerOne");
 var playerTwo = document.getElementById("playerTwo");
 var header = document.getElementById("header");
@@ -13,6 +13,16 @@ var cross;
 var knot;
 var choice;
 var choiceTwo;
+
+//FadeIn background-color
+var colorChange = setTimeout(function(){
+
+  wrapper.style.backgroundColor="rgb(33, 175, 47)";
+
+
+}, 250);
+
+
 //Function for Title Screen action
 function next() {
 
@@ -61,7 +71,6 @@ function ok() {
     header.style.opacity = "0";
     cross.style.opacity="0";
     knot.style.opacity="0";
-    wrapper.style.background="black";
     //Display none
     setTimeout(function() {
     header.style.display = "none";
@@ -77,9 +86,23 @@ function ok() {
 }
 
 
+
+//Game Function
   function gameChoice(e) {
     choiceTwo = choice === "O" ? "X" : "O";
     e.target.childNodes[0].innerHTML = choice;
+    var arrChoice = [
+      gameValue("one"), gameValue("two"), gameValue("three"),
+      gameValue("four"), gameValue("five"), gameValue("six"),
+      gameValue("seven"), gameValue("eight"), gameValue("nine"),
+    ]
+
+    //for (var i = 0; i<arrChoice.length; i++){
+      if(arrChoice[0]==arrChoice[1]==arrChoice[2]&&arrChoice!==""){console.log("A")}
+      console.log(arrChoice[0]===arrChoice[1])
+
+
+
     var arr = [];
     for (var i=0; i<button.length; i++) {
       if(button[i].childNodes[0].innerHTML===""){arr.push(button[i])};
@@ -101,7 +124,7 @@ function ok() {
         }
       }
 
-    }, 600);
+    }, 700);
 
 
 

@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Arsenal|Dosis|Indie+Flower|Lato|Open+Sans|Overpass|PT+Sans|Raleway|Roboto');
 
 #wrapper {
-    background: rgb(33, 175, 47);
+    background: black;
     width: 25em;
     height: 28em;
     margin: 7em auto;
     border: 1px solid black;
     border-radius: 1em;
-    box-shadow: 0 0 100px;
+    box-shadow: 0 0 10px;
     transition: all 1.5s ease;
     overflow: hidden;
 }
 
 #content {
     background-color: black;
-    box-shadow: 0 0 20px;
+    box-shadow: 0 0 10px;
     height: 24em;
     width: 22em;
     margin: 2em auto;
@@ -115,6 +115,7 @@ button {
   top: 1em;
   background-color: black;
   border: none;
+  outline: none;
   vertical-align: top;
 }
 
